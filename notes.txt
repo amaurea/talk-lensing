@@ -1,0 +1,12 @@
+* Dark universe conference (20+10 or 25+5 min - relatively short! - about 25 slides?)
+* Heidelberg cares about dark energy => Will be lensing-oriented
+* Present ACT and preliminary ACTPol lensing results
+* Experiment -> TOD -> map estimation -> power spectrum and lensing estimation
+	* Importance of high resolution
+	* Delensing? No, not for ACT and probably not for AdvAct
+* Cross-correlation
+	* Galaxy bias
+* Other dark stuff: Neutrino mass, neutrino species
+* State of the art + projections (AdvActpol etc.)
+* Primordial B-modes?
+	* Planck results will be out by then
