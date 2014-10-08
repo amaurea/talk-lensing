@@ -50,14 +50,19 @@
 
 \begin{frame}{Lensing distorts the CMB}
 	\begin{center}
-		\only<1>{\includegraphics[height=7cm]{plots/maps/T.png}}%
-		\only<2>{\includegraphics[height=7cm]{plots/maps/TlT.png}}%
-		\only<3-4>{\includegraphics[height=7cm]{plots/maps/TsT.png}}%
+		\begin{tikzpicture}
+			\only<1>{\node at (0,0) {\includegraphics[height=7cm]{plots/maps/T.png}};}%
+			\only<2>{\node at (0,0) {\includegraphics[height=7cm]{plots/maps/T.png}};}%
+			\only<3>{\node at (0,0) {\includegraphics[height=7cm]{plots/maps/TlT.png}};}%
+			\only<4-5>{\node at (0,0) {\includegraphics[height=7cm]{plots/maps/TsT.png}};}%
+			\only<2-4>{\node at (0,0) {\includegraphics[height=7cm]{plots/maps/phi_contours.png}};}%
+		\end{tikzpicture}
 
-		\only<1>{Unlensed}%
-		\only<2>{Lensed}%
-		\only<3>{Lensed x10}%
-		\only<4>{Non-Gaussian}%
+		\only<1>{Unlensed\uncover<0>{p}}%
+		\only<2>{Gravitational potential}%
+		\only<3>{Lensed\uncover<0>{p}}%
+		\only<4>{Lensed x10\uncover<0>{p}}%
+		\only<5>{Non-Gaussian\uncover<0>{p}}%
 	\end{center}
 \end{frame}
 
