@@ -10,3 +10,12 @@
 * State of the art + projections (AdvActpol etc.)
 * Primordial B-modes?
 	* Planck results will be out by then
+
+Title: Exploring the dark universe with the Atacama Cosmology Telescope
+
+Abstract: Beoyond the cosmic microwave background's temperature power
+spectrum, there is sill a large amount of information to be extracted
+from its polarization and its spatial and spectral distortions, especially
+when cross-correlated with other data sets. I will present past and current
+Atacama Cosmology Telescope results along with future projections, including
+lensing, polarization measurements and Sunyaev-Zel'dovich clusters.
