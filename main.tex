@@ -40,7 +40,7 @@
 			\node at (0,0) {\includegraphics[width=\textwidth]{plots/Planck_gravitational_lensing_CMB_transparent.png}};
 			\uncover<2->{\draw[thick,white,dashed] (-5,2.6) -- (2.4,-0.4);}
 			\uncover<3->{\draw[thick,white,->] (2.4,-0.4) -- (2.8,-0.15);}
-			\uncover<4->{\node[white] at (3.5,-0.5) {$\sim2$ arcmin};}
+			\uncover<4->{\node[white] at (3.5,-0.5) {$\sim3$ arcmin};}
 		\end{tikzpicture}
 
 		{\footnotesize Credit: Planck, ESA}
@@ -212,17 +212,82 @@
 	\end{center}
 \end{frame}
 
-\begin{frame}{Good systematics}
+\begin{frame}{CMB lensing vs. other probes}
 	\begin{itemize}
-		\item Linear physics (mostly)
-
+		\item Very clean
+		\item (Mostly) linear physics
+		\item Cannot split into redshift bins
 	\end{itemize}
+\end{frame}
+
+\begin{frame}{3 main things to do with CMB lensing}
+	\begin{center}
+		\vspace{-0.5cm}%
+		\hspace*{-0.7cm}%
+		\begin{tikzpicture}
+			\node[anchor=north,rounded corners,fill=red!10,  text height=7cm,text width=3.5cm] at (0,0) {};
+			\node[anchor=north,rounded corners,fill=green!10,text height=7cm,text width=3.5cm] at (4,0) {};
+			\node[anchor=north,rounded corners,fill=blue!10, text height=7cm,text width=3.5cm] at (8,0) {};
+
+			\node[anchor=north] at (0,0) {
+				\hspace*{-4mm}
+				\begin{minipage}{4cm}
+					\begin{center}
+					{\large Power spectrum}
+					\begin{itemize}
+						\item Use directly as cosmological probe
+						%\includegraphics[height=2cm]{plots/cphi_small.pdf}
+						% Replace with Planck neutrino mass phi spectrum plot from blake talk
+						\item $\Omega_\Lambda$, $\sum m_\nu$, \ldots
+						\item Astrophys.-independent dark energy measurement
+					\end{itemize}
+					\end{center}
+				\end{minipage}
+			};
+
+			\node[anchor=north] at (4,0) {
+				\hspace*{-4mm}
+				\begin{minipage}{4cm}
+					\begin{center}
+					{\large Cross-correlation}
+					\begin{itemize}
+						\item Improve CMB lensing est.
+						\item Use CMB lens. to calibrate others
+						\item Result: Bias-free DM dist. for each z
+						\item Bonus: Measure galaxy bias
+					\end{itemize}
+					\end{center}
+				\end{minipage}
+			};
+
+			\node[anchor=north] at (8,0) {
+				\hspace*{-4mm}
+				\begin{minipage}{4cm}
+					\begin{center}
+					{\large Imaging}
+					\begin{itemize}
+						\item Map the lensing field
+						\item Delensing for B-modes
+						\item Check isotropy etc.
+					\end{itemize}
+					\includegraphics[height=3cm]{plots/maps/phi.png}
+					\end{center}
+				\end{minipage}
+			};
+		\end{tikzpicture}
+	\end{center}
 \end{frame}
 
 \begin{frame}{Observational status}
 \end{frame}
 
 \begin{frame}{(Near) future}
+	\begin{center}
+		\includegraphics[height=8cm]{plots/cmb_lensing_past_future_blake.png}
+
+		\vspace{-0.5cm}
+		{\footnotesize Credit: Blake Sherwin}
+	\end{center}
 \end{frame}
 
 \end{document}
