@@ -38,10 +38,9 @@
 	\begin{center}
 		\begin{tikzpicture}
 			\node at (0,0) {\includegraphics[width=\textwidth]{plots/Planck_gravitational_lensing_CMB_transparent.png}};
-			\uncover<2->{%
-			\draw[thick,white,dashed] (-5,2.6) -- (2.4,-0.4);
-			\draw[thick,white,->] (2.4,-0.4) -- (2.8,-0.15);
-			\node[white] at (3.5,-0.5) {$\sim2$ arcmin};}
+			\uncover<2->{\draw[thick,white,dashed] (-5,2.6) -- (2.4,-0.4);}
+			\uncover<3->{\draw[thick,white,->] (2.4,-0.4) -- (2.8,-0.15);}
+			\uncover<4->{\node[white] at (3.5,-0.5) {$\sim2$ arcmin};}
 		\end{tikzpicture}
 
 		{\footnotesize Credit: Planck, ESA}
@@ -132,12 +131,92 @@
 \end{frame}
 
 \begin{frame}{Disentangling CMB and lensing}
+	\begin{center}
+		\begin{itemize}
+			\item Lensing correlates previously uncorrelated multipoles
+				\begin{tabular}{lll}
+					Before & $\langle T(\mathbf{l}_1)T(\mathbf{l}_2)\rangle = 0$ & for $\mathbf{l}_1 \ne \mathbf{l}_2$ \\
+					After &  $\langle T(\mathbf{l}_1)T(\mathbf{l}_2)\rangle \propto \phi(\mathbf{l}_1+\mathbf{l}_2)$ & for $\mathbf{l}_1 \ne \mathbf{l}_2$
+				\end{tabular}
+			\item \uncover<2->{Use cross-correlations to reconstruct lensing potential}
+				\begin{tikzpicture}
+					\node at (0,0) {%
+						$\begin{aligned}
+							\uncover<3->{%
+							\begin{matrix}
+								\textrm{\tiny lensed T}\left\{\mimg{plots/maps/TlT.png}{2cm}\right. \\
+								\textrm{\tiny lensed E}\left\{\mimg{plots/maps/EBlE.png}{2cm}\right. \\
+								\textrm{\tiny lensed B}\left\{\mimg{plots/maps/EBlB.png}{2cm}\right.
+							\end{matrix}}
+							\uncover<4->{%
+							\rightarrow
+							\underbrace{\mimg{plots/maps/phi.png}{2cm}}_{\textrm{\tiny lensing potential }\phi}}
+							\uncover<5->{%
+							\rightarrow
+							\begin{matrix}
+								\left.\mimg{plots/maps/T.png}{2cm}\right\}\textrm{\tiny true T} \\
+								\left.\mimg{plots/maps/E.png}{2cm}\right\}\textrm{\tiny true E} \\
+								\left.\mimg{plots/maps/B.png}{2cm}\right\}\textrm{\tiny true B}
+							\end{matrix}}
+					\end{aligned}$};
+					\uncover<6->{\draw[thick,red] (0.15,-0.25) circle (1.62);}
+			\end{tikzpicture}
+		\end{itemize}
+	\end{center}
 \end{frame}
 
-\begin{frame}{Lensing as an observable}
+\begin{frame}{Pure CMB is degenerate}
+	\begin{center}
+		\vspace{-10mm}
+		\begin{tikzpicture}
+			\node at ( 4.15,0.12) {\includegraphics[height=4.2cm]{plots/cmb_slice.png}};
+			\node at ( 0.00,0.00) {\includegraphics[width=10cm]{plots/z_cmb.pdf}};
+			\node[orange] at (4.15,2.40) {CMB};
+			\node at (-5.20,0.20) {\includegraphics[height=1.0cm]{plots/earth.png}};
+			\uncover<14->{%
+			\node at ( 0.00,0.00) {\includegraphics[width=10cm]{plots/z_sn.pdf}};
+			\node[blue] at (-2.40,2.40) {SN};}
+			\uncover<15->{%
+			\node at ( 0.00,0.00) {\includegraphics[width=10cm]{plots/z_bao.pdf}};
+			\node[green] at (-0.32,2.40) {BAO};}
+			\uncover<18->{%
+			\node at ( 0.00,0.00) {\includegraphics[width=10cm]{plots/z_lens.pdf}};
+			\node[magenta,align=center] at (-0.24,0.00) {CMB\\Lensing};}
+
+			\uncover<2-11>{%
+			\draw[thick,red] (4.15,0.26) ellipse (0.4 and 2.5);}
+			\uncover<3-11>{%
+			\draw[ultra thick,red,<->] (-4.2,2.4) -- (3.6,2.4);
+			\node[red] at (0.0,2.7) {$d_A$};}
+			\uncover<4-11>{%
+			\node[blue,scale=2] at (0,0.2) {\Huge ?};}
+
+			\node at (0,-4) {$\begin{aligned}
+				\uncover<5->{\mimg{plots/maps/degen1.png}{2cm}}
+				\uncover<6->{\xrightarrow{-\Omega_\Lambda}}
+				\uncover<7->{\mimg{plots/maps/degen2.png}{2cm}}
+				\uncover<8->{\xrightarrow{+t_0}}
+				\uncover<9->{\mimg{plots/maps/degen3.png}{2cm}}
+				\uncover<10->{\xrightarrow{+\Omega_k}}
+				\uncover<11->{\mimg{plots/maps/degen1.png}{2cm}}
+				\end{aligned}$};
+
+			\uncover<12>{\node[fill=white,align=center] at (0,-1.5) {
+				\includegraphics[height=7.5cm]{plots/cmb_nolens_degen.png}\\
+				{\footnotesize Modified from Sherwin et al. 2011 \uncover<0>{g}}};}
+			\uncover<16>{\node[fill=white,align=center] at (0,-1.5) {
+				\includegraphics[height=7.5cm]{plots/cmb_nolens_sn_bao.png}\\
+				{\footnotesize Modified from Supernova Cosmology Project 2010}};}
+
+		\end{tikzpicture}
+	\end{center}
 \end{frame}
 
 \begin{frame}{Good systematics}
+	\begin{itemize}
+		\item Linear physics (mostly)
+
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{Observational status}
