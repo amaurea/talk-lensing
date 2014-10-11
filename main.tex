@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[table]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[squaren]{SIunits}
 \usepackage{varwidth,setspace}
@@ -278,7 +278,58 @@
 	\end{center}
 \end{frame}
 
+\begin{frame}{Uses of CMB lensing 1: Power spectrum}
+	\begin{itemize}
+		\item<2-> Power smoothing in high-l $C_\ell^{TT}$
+		\item<5-> Power excess in $C_\ell^{BB}$
+		\item<8-> Power spectrum of lensing potential itself
+		\item<11-> Phases not needed - large area can compensate for sensitivity
+		\item<12-> Clean probe of $\Omega_\Lambda$, $\sum m_\nu$, $\ldots$
+	\end{itemize}
+	\hspace*{-1cm}
+	\begin{tikzpicture}
+		\uncover<3-5>{%
+		\node at (0,0) {\includegraphics[height=4cm]{plots/excess_TT.pdf}};}
+		\uncover<4-5>{%
+		\node at (5.5,0) {\includegraphics[height=4cm,clip,trim=20mm 11mm 10mm 9mm]{plots/acbar.pdf}};
+		\node at (5.5,-1) {ACBAR 2008 $3\sigma$};}
+
+		\uncover<6-8>{%
+		\node at (0,0) {\includegraphics[height=4cm]{plots/excess_BB.pdf}};}
+		\uncover<7-8>{%
+		\node at (5.5,-0.1) {\includegraphics[height=4.2cm,clip,trim=0mm 0mm 0mm -2mm]{plots/polarbear.pdf}};
+		\node at (5.4,1.2) {\footnotesize POLARBEAR 2014 $2\sigma$};}
+
+		\uncover<9->{%
+		\node at (1.0,0) {\includegraphics[height=3.7cm,clip,trim=15mm 8mm 0mm 1mm]{plots/act_lens_spec11.pdf}};
+		\node at (2,0) {\footnotesize ACT 2011 $4.0\sigma$};}
+		\uncover<10->{%
+		\node at (6.2,-0.1) {\includegraphics[height=4.2cm,clip,trim=7mm 0mm 0mm 0mm]{plots/planck_lens_spec.pdf}};
+		\node at (5.8,-1.5) {\footnotesize Planck 2013 $25\sigma$};}
+
+	\end{tikzpicture}
+\end{frame}
+
 \begin{frame}{Observational status}
+	\begin{tabular}{lrlrr}
+		Type & Year & Dataset & Signif. &arXiv \\
+		\rowcolor{red!25}   Cross     & 2007 &WMAP CMB x NRAO galaxies& $3.4\sigma$ &0705.3980  \\
+		\rowcolor{green!25} Excess    & 2008 &ACBAR CMB + WMAP CMB    &  $>3\sigma$ &0803.2309  \\
+		\rowcolor{green!25} Excess    & 2010 &ACT CMB + WMAP CMB      & $2.8\sigma$ &1009.0847  \\
+		\rowcolor{blue!25}  Spectrum  & 2011 &ACT CMB                 & $4.0\sigma$ &1103.2124  \\
+		\rowcolor{blue!25}  Spectrum  & 2012 &SPT CMB                 & $6.3\sigma$ &1202.0546  \\
+		\rowcolor{red!25}   Cross     & 2012 &SPT CMB x BCS,WISE,Spit.&  $>5\sigma$ &1203.4808  \\
+		\rowcolor{red!25}   Cross     & 2012 &ACT CMB x SDSS quasar   & $3.8\sigma$ &1207.4543  \\
+		\rowcolor{blue!25}  Spectrum  & 2013 &ACT CMB                 & $4.6\sigma$ &1301.1037  \\
+		\rowcolor{red!25}   Cross     & 2013 &SPT CMB x Herchel CIB   &  $>9\sigma$ &1303.5048  \\
+		\rowcolor{yellow!25}Imaging   & 2013 &SPT CMB                &$\sim4\sigma$ &1303.5048  \\
+		\rowcolor{red!25}   Cross     & 2013 &Planck CMB x NVSS       &  $20\sigma$ &1303.5077  \\
+		\rowcolor{blue!25}  Spectrum  & 2013 &Planck CMB              &  $25\sigma$ &1303.5077  \\
+		\rowcolor{orange!25}Cross B   & 2013 &SPT CMB x Herschel CIB  & $7.7\sigma$ &1307.5830  \\
+		\rowcolor{red!25}   Cross     & 2013 &Planck CMB x tSZ        & $6.2\sigma$ &1312.4525  \\
+		\rowcolor{blue!25}  Spectrum (EB) & 2013 &POLARBEAR CMB           & $4.2\sigma$ &1312.6646  \\
+		\rowcolor{green!25}  Excess B  & 2014 &POLARBEAR CMB          &$\sim2\sigma$ &1403.2369
+	\end{tabular}
 \end{frame}
 
 \begin{frame}{(Near) future}
