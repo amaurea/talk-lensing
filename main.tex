@@ -310,7 +310,34 @@
 	\end{tikzpicture}
 \end{frame}
 
+\begin{frame}{Uses of CMB lensing 2: Cross-correlation}
+	\begin{itemize}
+		\item<2-> Uses phases, but fine if noise dominated
+		\item<3-> Cross-correlate to detect CMB lensing
+			\begin{itemize}
+				\item<4-> WMAP CMB x NRAO galaxies 2007 $3.4\sigma$
+				\item<5-> ACT CMB x CFHTS gal.lens. 2013 $3.2\sigma$
+				\item<6-> Planck CMB x Planck CIB 2013 $42\sigma$!
+			\end{itemize}
+		\item<7-> Cross-correlate to verify/calibrate other data sets
+			\begin{itemize}
+				\item<8-> Bias-free dark matter tomography!
+			\end{itemize}
+	\end{itemize}
+	\uncover<4->{%
+	\begin{tikzpicture}
+		\node[anchor=west] at (0,0) {
+			$\mimg{plots/maps/phi.png}{2.4cm} \times \left\{\mimg{plots/sdss_galaxies.jpg}{2.4cm}\only<5->{,\mimg{plots/lensing.png}{2.4cm}\only<6->{,\mimg{plots/planck_cib.png}{2.4cm}}}\right\}$
+		};
+		\node at (-4.3+5.6,-1.6) {CMB lens.};
+		\node at (-1.1+5.6,-1.6) {gal dist.};
+		\uncover<5->{\node at ( 1.4+5.6,-1.6) {gal.lens.};}
+		\uncover<6->{\node at ( 4.0+5.6,-1.6) {CIB};}
+	\end{tikzpicture}}
+\end{frame}
+
 \begin{frame}{Observational status}
+	\small
 	\begin{tabular}{lrlrr}
 		Type & Year & Dataset & Signif. &arXiv \\
 		\rowcolor{red!25}   Cross     & 2007 &WMAP CMB x NRAO galaxies& $3.4\sigma$ &0705.3980  \\
@@ -325,7 +352,9 @@
 		\rowcolor{yellow!25}Imaging   & 2013 &SPT CMB                &$\sim4\sigma$ &1303.5048  \\
 		\rowcolor{red!25}   Cross     & 2013 &Planck CMB x NVSS       &  $20\sigma$ &1303.5077  \\
 		\rowcolor{blue!25}  Spectrum  & 2013 &Planck CMB              &  $25\sigma$ &1303.5077  \\
+		\rowcolor{red!25}   Cross     & 2013 &Planck CMB x CIB        &  $42\sigma$ &1303.5078  \\
 		\rowcolor{orange!25}Cross B   & 2013 &SPT CMB x Herschel CIB  & $7.7\sigma$ &1307.5830  \\
+		\rowcolor{red!25}   Cross     & 2013 &ACT CMB x CFHTS gal.lens& $3.2\sigma$ &1311.6200  \\
 		\rowcolor{red!25}   Cross     & 2013 &Planck CMB x tSZ        & $6.2\sigma$ &1312.4525  \\
 		\rowcolor{blue!25}  Spectrum (EB) & 2013 &POLARBEAR CMB           & $4.2\sigma$ &1312.6646  \\
 		\rowcolor{green!25}  Excess B  & 2014 &POLARBEAR CMB          &$\sim2\sigma$ &1403.2369
