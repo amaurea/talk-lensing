@@ -19,7 +19,7 @@
 
 \setlength{\tabcolsep}{0.5mm}
 
-\title{Exploring the dark universe with weak CMB lensing}
+\title{Exploring the dark universe with CMB lensing}
 \author{Sigurd Kirkevold Næss}
 \institute{Subdepartment of astrophysics, Oxford University}
 \date{October 13th, 2014}
@@ -31,6 +31,23 @@
 	\vspace{-1cm}
 	\begin{center}
 	{\footnotesize The source code for this talk can be found at {\color[rgb]{0,0.7,0}https://github.com/amaurea/talk-lensing}}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Frontiers in CMB observation}
+	\vspace{-0.0cm}
+	\begin{center}
+	\begin{tikzpicture}
+		\node[anchor=north west] at (0,0) {\includegraphics[width=10cm,clip,trim=7mm 0mm 10mm 12mm]{plots/cmb_spectra_obs.pdf}};
+		\uncover<2->{%
+		\draw[ultra thick,->,postaction={decorate,decoration={text along path,raise=1mm,text align=center,text={Sensitivity}}},blue] (1.2,-0.2) -- ++(3,-6);}
+		\uncover<3->{%
+		\draw[ultra thick,->,postaction={decorate,decoration={text along path,raise=1mm,text align=center,text={Resolution}}},red]  (1.2,-0.2) -- ++(8, 0);}
+		\uncover<4->{%
+		\path[opacity=0.1,fill=black] (1.1,-5.0) rectangle (9.61,-6.85);
+		\path[opacity=0.1,fill=black] (6.3,-0.3) rectangle (9.61,-5.00);
+		\node[align=center,text width=3cm,gray] at (6,-6) {\Large Lensing important};}
+	\end{tikzpicture}
 	\end{center}
 \end{frame}
 
@@ -85,25 +102,6 @@
 \begin{frame}{E, B and Q, U}
 	\begin{center}
 		\includegraphics[height=8cm]{plots/EB_healpix.pdf}
-	\end{center}
-\end{frame}
-
-\begin{frame}{E,B and Q, U}
-	\begin{center}
-		\only<1>{E and B result from quadrupole-convolutions of Q and U}%
-		\only<2>{Reverse also holds}%
-
-	\scalebox{1.7}{
-		\begin{minipage}{5cm}
-			\begin{align*}
-				\only<1>{%
-				E =& \rmimg{plots/queb_0.png}{1cm} \otimes Q + \mimg{plots/queb_2.png}{1cm} \otimes U \\
-				B =& \mimg{plots/queb_1.png}{1cm} \otimes Q + \rmimg{plots/queb_3.png}{1cm} \otimes U}%
-				\only<2>{%
-				Q =& \rmimg{plots/ebqu_0.png}{1cm} \otimes E + \mimg{plots/ebqu_2.png}{1cm} \otimes B \\
-				U =& \mimg{plots/ebqu_1.png}{1cm} \otimes E + \rmimg{plots/ebqu_3.png}{1cm} \otimes B}%
-			\end{align*}
-		\end{minipage}}
 	\end{center}
 \end{frame}
 
@@ -389,6 +387,25 @@
 		\rowcolor{blue!25}  Spectrum (EB) & 2013 &POLARBEAR CMB           & $4.2\sigma$ &1312.6646  \\
 		\rowcolor{green!25}  Excess B  & 2014 &POLARBEAR CMB          &$\sim2\sigma$ &1403.2369
 	\end{tabular}
+\end{frame}
+
+\begin{frame}{E,B and Q, U}
+	\begin{center}
+		\only<1>{E and B result from quadrupole-convolutions of Q and U}%
+		\only<2>{Reverse also holds}%
+
+	\scalebox{1.7}{
+		\begin{minipage}{5cm}
+			\begin{align*}
+				\only<1>{%
+				E =& \rmimg{plots/queb_0.png}{1cm} \otimes Q + \mimg{plots/queb_2.png}{1cm} \otimes U \\
+				B =& \mimg{plots/queb_1.png}{1cm} \otimes Q + \rmimg{plots/queb_3.png}{1cm} \otimes U}%
+				\only<2>{%
+				Q =& \rmimg{plots/ebqu_0.png}{1cm} \otimes E + \mimg{plots/ebqu_2.png}{1cm} \otimes B \\
+				U =& \mimg{plots/ebqu_1.png}{1cm} \otimes E + \rmimg{plots/ebqu_3.png}{1cm} \otimes B}%
+			\end{align*}
+		\end{minipage}}
+	\end{center}
 \end{frame}
 
 \end{document}
