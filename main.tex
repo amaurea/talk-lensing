@@ -336,6 +336,32 @@
 	\end{tikzpicture}}
 \end{frame}
 
+\begin{frame}{Uses of CMB lensing 3: Imaging}
+	\begin{itemize}
+		\item<2-> $S/N > 2$ for at least some modes in map
+		\item<5-> Requires high sensitivity and high resolution
+		\item<7-> Delens CMB B-modes
+		\item<8-> Isotropy check
+	\end{itemize}
+	\begin{center}
+		\begin{tikzpicture}
+			\uncover<3-5>{%
+			\node at (0,2.3cm) {Planck $25\sigma$};
+			\node (A) at (0,0) {\includegraphics[height=4cm]{plots/planck_lensmap_north.pdf}};}
+			\uncover<4-5>{%
+			\draw[thick,red] (A.north west) -- (A.south east);
+			\draw[thick,red] (A.south west) -- (A.north east);
+			\node at (0,-2.3cm) {$S/N<1$};}
+
+			\uncover<6->{%
+			\node at (0.2,2.6cm) {SPT 2013};
+			\node at (0,0) {\includegraphics[height=4.5cm,clip,trim=8mm 105mm 100mm 12mm]{plots/spt_lensmap.pdf}};
+			\node at (0.2,-2.6cm) {$S/N \sim 4$};}
+
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
 \begin{frame}{Observational status}
 	\small
 	\begin{tabular}{lrlrr}
