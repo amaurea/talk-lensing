@@ -3,7 +3,7 @@
 \usepackage[squaren]{SIunits}
 \usepackage{varwidth,setspace}
 \usepackage{tikz}
-\usetikzlibrary{intersections,positioning,backgrounds,fit,matrix,shapes,calc,decorations.pathmorphing,decorations.text}
+\usetikzlibrary{intersections,positioning,backgrounds,fit,matrix,shapes,calc,decorations.pathmorphing,decorations.text,decorations.pathreplacing}
 \usetheme{default}
 
 \newcommand*{\mimg}[2]{\begingroup
@@ -19,7 +19,7 @@
 
 \setlength{\tabcolsep}{0.5mm}
 
-\title{Exploring the dark universe with the Atacama Cosmology Telescope}
+\title{Exploring the dark universe with weak CMB lensing}
 \author{Sigurd Kirkevold Næss}
 \institute{Subdepartment of astrophysics, Oxford University}
 \date{October 13th, 2014}
@@ -30,7 +30,7 @@
 	\titlepage
 	\vspace{-1cm}
 	\begin{center}
-	{\footnotesize The source code of this talk can be found at {\color[rgb]{0,0.7,0}https://github.com/amaurea/talk-lensing}}
+	{\footnotesize The source code for this talk can be found at {\color[rgb]{0,0.7,0}https://github.com/amaurea/talk-lensing}}
 	\end{center}
 \end{frame}
 
@@ -213,21 +213,33 @@
 \end{frame}
 
 \begin{frame}{CMB lensing vs. other probes}
-	Main other probes of large-scale structure
+	CMB lensing is not the only probe of large scale structure
+	\vspace{2mm}
+
+	\begin{tikzpicture}[
+			ball/.style={circle,align=center,inner sep=0,text width=1.4cm},
+			ubrace/.style={decoration={brace,mirror,raise=2mm,amplitude=4mm},decorate}
+		]
+		\node[ball,fill=blue!20]    (A) at (0.0,0.0) {\small Galaxies};
+		\node[ball,fill=blue!20]    (B) at (1.5,0.0) {\small Quasars};
+		\node[ball,fill=blue!20]    (C) at (3.0,0.0) {\small Clusters};
+		\node[ball,fill=green!20]   (D) at (4.5,0.0) {CIB};
+		\node[ball,fill=green!20]   (E) at (6.0,0.0) {21 cm};
+		\node[ball,fill=magenta!20] (F) at (7.5,0.0) {\small Gal.lens};
+		\node[ball,fill=magenta!20] (G) at (9.0,0.0) {\small cmb lens};
+		\draw[thick,ubrace] (A.south west) -- (C.south east) node[pos=0.5,anchor=north,yshift=-5mm] {Number counts};
+		\draw[thick,ubrace] (D.south west) -- (E.south east) node[pos=0.5,anchor=north,yshift=-5mm] {Intensity mapping};
+		\draw[thick,ubrace] (F.south west) -- (G.south east) node[pos=0.5,anchor=north,yshift=-5mm] {Lensing};
+	\end{tikzpicture}
+	\uncover<2->{Compared to these, CMB lensing is
 	\begin{itemize}
-		\item Galaxy, quasar and cluster counts
-		\item Cosmic Infrared Background
-		\item 21 cm intensity mapping
-		\item Galaxy lensing
-	\end{itemize}
-	Compared to these, CMB lensing is
-	\begin{itemize}
-		\item Very clean (simple source, no astrophysics, linear regime)
-		\item High redshift ($0.1\lesssim z\lesssim 10$)
-		\item Faint
-		\item Low resolution
-		\item No tomography
-	\end{itemize}
+		\item<3-> \color{green!50!black}Very clean (simple source, no astrophysics, linear regime)
+		\item<4-> \color{green!50!black}Directly measures total (i.e. mostly dark) matter distribution
+		\item<5-> \color{green!50!black}High redshift ($0.1\lesssim z\lesssim 10$)
+		\item<6-> \color{red}Faint
+		\item<7-> \color{red}Low resolution
+		\item<8-> \color{red}No tomography
+	\end{itemize}}
 \end{frame}
 
 \begin{frame}{Uses of CMB lensing 1: Power spectrum}
