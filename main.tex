@@ -234,7 +234,7 @@
 	\end{itemize}}
 \end{frame}
 
-\begin{frame}{Uses of CMB lensing 1: Power spectrum}
+\begin{frame}{Measuring CMB lensing 1: Power spectrum}
 	\begin{itemize}
 		\item<2-> Power smoothing in high-l $C_\ell^{TT}$
 		\item<5-> Power excess in $C_\ell^{BB}$
@@ -266,7 +266,7 @@
 	\end{tikzpicture}
 \end{frame}
 
-\begin{frame}{Uses of CMB lensing 2: Cross-correlation}
+\begin{frame}{Measuring CMB lensing 2: Cross-correlation}
 	\begin{itemize}
 		\item<2-> Uses phases, but fine if noise dominated
 		\item<3-> Cross-correlate to detect CMB lensing
@@ -292,7 +292,7 @@
 	\end{tikzpicture}}
 \end{frame}
 
-\begin{frame}{Uses of CMB lensing 3: Imaging}
+\begin{frame}{Measuring CMB lensing 3: Imaging}
 	\begin{itemize}
 		\item<2-> $S/N > 2$ for at least some modes in map
 		\item<5-> Requires high sensitivity and high resolution
@@ -344,14 +344,33 @@
 \begin{frame}{Summary}
 	\begin{center}
 		\begin{itemize}
-			\item<2-> CMB lensing is a very clean probe of dark matter distribution
+			\item<2-> CMB lensing is a clean probe of dark matter distribution
 			\item<3-> By itself: Probe $\Omega_\Lambda$, neutrinos; clean B-modes
-			\item<4-> Better: Cross-correlate to clean other probes
-			\item<5-> Very rapid progress $3\sigma \rightarrow 42\sigma$ in 6 years
-			\item<6-> Soon-ish: $150\sigma$ direct detection
+			\item<4-> With other probes: High-z data point, test early DE
+			\item<5-> Cross-correlate to reduce systematics
+			\item<6-> Very rapid progress: $\stackrel{2011}{4\sigma}\rightarrow\stackrel{2013}{25\sigma}\rightarrow\stackrel{2015?}{50\sigma}\rightarrow\stackrel{2017?}{150\sigma}$
 		\end{itemize}
-		\uncover<5->{\includegraphics[height=4cm,clip,trim=7mm -3mm 8mm 8mm]{plots/planck_lens_spec.pdf}}
-		\uncover<6->{\includegraphics[height=4.2cm,clip,trim=6mm 32mm 0mm -8mm]{plots/cmb_lensing_past_future_blake.png}}
+		\begin{tikzpicture}
+			\uncover<4-5>{%
+				\node[scale=0.6] at (5.2,0.2) {
+				\begin{tikzpicture}
+					\node at ( 4.15,0.12) {\includegraphics[height=4.2cm]{plots/cmb_slice.png}};
+					\node at ( 0.00,0.00) {\includegraphics[width=10cm]{plots/z_cmb.pdf}};
+					\node[orange] at (4.15,2.40) {CMB};
+					\node at ( 0.00,0.00) {\includegraphics[width=10cm]{plots/z_sn.pdf}};
+					\node[blue] at (-2.40,2.40) {SN};
+					\node at ( 0.00,0.00) {\includegraphics[width=10cm]{plots/z_bao.pdf}};
+					\node[green] at (-0.32,2.40) {BAO};
+					\node at ( 0.00,0.00) {\includegraphics[width=10cm]{plots/z_lens.pdf}};
+					\node[magenta,align=center] at (-0.24,0.00) {CMB\\Lensing};
+				\end{tikzpicture}
+		};}
+
+			\uncover<5->{%
+			\node at (0,0) {\includegraphics[height=4cm,clip,trim=7mm -3mm 8mm 8mm]{plots/planck_lens_spec.pdf}};}
+			\uncover<6->{%
+			\node at (5.2,0.1) {\includegraphics[height=4.2cm,clip,trim=6mm 32mm 0mm -8mm]{plots/cmb_lensing_past_future_blake.png}};}
+		\end{tikzpicture}
 	\end{center}
 \end{frame}
 
